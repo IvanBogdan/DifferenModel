@@ -25,7 +25,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car save(Car car) {
-        car.getValues().forEach(v -> v.setCar(car));
+        car.getValues().forEach(v -> v.setCollateral(car));
         return carRepository.save(car);
     }
 

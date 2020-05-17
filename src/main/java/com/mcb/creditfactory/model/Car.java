@@ -4,12 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.math.BigDecimal;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -27,7 +31,7 @@ public class Car {
     @Column(name = "year_of_issue")
     private Short year;
 
-    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
-    private List<AssessedValue> values = new ArrayList<>();
+    @OneToMany(mappedBy = "collateral", cascade = CascadeType.ALL)
+    private List<CarAssessment> values = new ArrayList<>();
 
 }

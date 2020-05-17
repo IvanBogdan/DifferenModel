@@ -25,7 +25,7 @@ public class AirplaneServiceImpl implements AirplaneService {
 
     @Override
     public Airplane save(Airplane airplane) {
-        airplane.getValues().forEach(v -> v.setAirplane(airplane));
+        airplane.getValues().forEach(v -> v.setCollateral(airplane));
         return airplaneRepository.save(airplane);
     }
 

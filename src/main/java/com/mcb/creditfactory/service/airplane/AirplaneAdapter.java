@@ -3,7 +3,7 @@ package com.mcb.creditfactory.service.airplane;
 import com.mcb.creditfactory.dto.AirplaneDto;
 import com.mcb.creditfactory.external.CollateralObject;
 import com.mcb.creditfactory.external.CollateralType;
-import com.mcb.creditfactory.model.AssessedValue;
+import com.mcb.creditfactory.model.AirplaneAssessment;
 import lombok.AllArgsConstructor;
 
 import java.math.BigDecimal;
@@ -17,7 +17,7 @@ public class AirplaneAdapter implements CollateralObject {
 
     @Override
     public BigDecimal getValue() {
-        List<AssessedValue> values = (List)airplane.getValues();
+        List<AirplaneAssessment> values = airplane.getValues();
         return values.get(values.size()-1).getValue(); }
 
     @Override
