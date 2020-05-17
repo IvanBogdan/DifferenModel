@@ -1,0 +1,17 @@
+POST http://localhost:807/collateral/save
+Content-Type: application/json
+
+{
+  "type" : "car",
+  "brand": "Aerobus",
+  "model": "A300",
+  "power" : 200,
+  "year": 2020,
+  "values": [{
+
+    "value": "2300000000", "date": "2019-08-22T06:11:00.000Z"}]
+
+
+}
+
+###
